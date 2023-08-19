@@ -1,5 +1,6 @@
 node {
-    docker.image('node:lts').inside('-p 3000:3000') {
+    agent
+    docker.image('node:14').inside('-p 3000:3000') {
         stage('Build') {
 
                 sh 'npm install'
